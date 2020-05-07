@@ -16,7 +16,7 @@ mongoose.connect(db, {
   useUnifiedTopology: true   // to avoid (node:9323) DeprecationWarning
 })
   .then(() => console.log('Connected to mLab...'))
-  .catch(err => console.log(`Couldn't to mLab: ${err}`));
+  .catch(err => console.log(`Couldn't connect to mLab: ${err}`));
 
 // Use Routes
 app.use('/api/items', itemRoutes);
