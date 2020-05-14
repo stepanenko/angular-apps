@@ -3,13 +3,11 @@ const express = require('express');
 const router = express.Router();
 const Item = require('../../models/Item');
 
-
 /**
  * @route   GET api/items
  * @desc    Get All Items
  * @access  Public
  */
-
 router.get('/', async (req, res) => {
   try {
     const items = await Item.find();
@@ -26,7 +24,6 @@ router.get('/', async (req, res) => {
  * @desc    Create An Item
  * @access  Private
  */
-
 router.post('/', async (req, res) => {
   const newItem = new Item({
     name: req.body.name
@@ -44,10 +41,9 @@ router.post('/', async (req, res) => {
 
 /**
  * @route   DELETE api/items/:id
- * @desc    Delete A Item
+ * @desc    Delete An Item
  * @access  Private
  */
-
 router.delete('/:id', async (req, res) => {
   try {
     const item = await Item.findById(req.params.id);
