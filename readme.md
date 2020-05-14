@@ -11,3 +11,5 @@ Progress: **75%**
 - React 16.13.1
 - Redux 4.0.5
 - Bootstrap: 4.4.1
+
+> Info: if can't connect to mLab make sure VPN is off
