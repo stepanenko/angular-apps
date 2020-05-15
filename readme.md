@@ -3,7 +3,7 @@
 
 by **Brad Traversy**
 
-Progress: **75%**
+Progress: **Part 8 Completed**
 
 **Tech stack:**
 - Nodejs
@@ -20,7 +20,7 @@ Progress: **75%**
 - `heroku login`
 - `git init`
 - `git add . && git commit -m "ready for deploy"`
-- `heroku git:remote: -a brad-mern`
+- `heroku git:remote -a brad-mern`
 - `git push heroku master`
 
 **To clone the repo:**
