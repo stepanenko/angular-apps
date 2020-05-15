@@ -17,8 +17,13 @@ Progress: **75%**
 
 **To deploy on heroku:**
 
-- `git init` -> `git add . && git commit -m "ready for deploy"`
-- `git remote:heroku -a brad-mern`
+- `heroku login`
+- `git init`
+- `git add . && git commit -m "ready for deploy"`
+- `heroku git:remote: -a brad-mern`
 - `git push heroku master`
+
+**To clone the repo:**
+- `heroku git:clone -a brad-mern`
 
 App is running at: https://brad-mern.herokuapp.com
