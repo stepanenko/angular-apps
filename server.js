@@ -1,14 +1,16 @@
 
 const express = require('express');
-const bodyParser = require('body-parser');
+// const bodyParser = require('body-parser'); // express now has its bodyparser
 const mongoose = require('mongoose');
 const path = require('path');
 
-const itemRoutes = require('./routes/api/items');
+// Routes
+// const itemRoutes = require('./routes/api/items');
 
 const app = express();
 
-app.use(bodyParser.json());
+// app.use(bodyParser.json()); // express now has its bodyparser
+app.use(express.json());
 
 const db = require('./config/keys').mongoURI;
 mongoose.connect(db, {
@@ -20,7 +22,8 @@ mongoose.connect(db, {
   .catch(err => console.log(`Couldn't connect to mLab: ${err}`));
 
 // Use Routes
-app.use('/api/items', itemRoutes);
+app.use('/api/items', require('./routes/api/items'));
+app.use('/api/users', require('./routes/api/users'));
 // app.use('/api/users', userRoutes);
 // app.use('/api/auth', authRoutes);
 
