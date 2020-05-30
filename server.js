@@ -3,6 +3,7 @@ const express = require('express');
 // const bodyParser = require('body-parser'); // express now has its bodyparser
 const mongoose = require('mongoose');
 const path = require('path');
+const config = require('config');
 
 // Routes
 // const itemRoutes = require('./routes/api/items');
@@ -12,7 +13,7 @@ const app = express();
 // app.use(bodyParser.json()); // express now has its bodyparser
 app.use(express.json());
 
-const db = require('./config/keys').mongoURI;
+const db = config.get('mongoURI');
 mongoose.connect(db, {
   useCreateIndex: true,      // to avoid (node:1601) DeprecationWarning
   useNewUrlParser: true,     // to avoid (node:9768) DeprecationWarning
