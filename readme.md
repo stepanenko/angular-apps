@@ -3,7 +3,7 @@
 
 by **Brad Traversy**
 
-Progress: **Part 8 Completed**
+Progress: **Part 9 Completed**
 
 **Tech stack:**
 - Nodejs

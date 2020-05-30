@@ -1,6 +1,7 @@
 
 const express = require('express');
 const router = express.Router();
+const auth = require('../../middleware/auth');
 const Item = require('../../models/Item');
 
 /**
@@ -24,7 +25,7 @@ router.get('/', async (req, res) => {
  * @desc    Create An Item
  * @access  Private
  */
-router.post('/', async (req, res) => {
+router.post('/', auth, async (req, res) => {
   const newItem = new Item({
     name: req.body.name
   });
@@ -44,7 +45,7 @@ router.post('/', async (req, res) => {
  * @desc    Delete An Item
  * @access  Private
  */
-router.delete('/:id', async (req, res) => {
+router.delete('/:id', auth, async (req, res) => {
   try {
     const item = await Item.findById(req.params.id);
     if (!item) throw Error('No item found');
