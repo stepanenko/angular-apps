@@ -17,7 +17,6 @@ import PropTypes from 'prop-types';
 import { register } from '../../actions/authActions';
 // import { v1 as uuid } from "uuid";
 
-
 class RegisterModal extends Component {
   state = {
     modal: false,
@@ -35,11 +34,12 @@ class RegisterModal extends Component {
 
   componentDidUpdate(prevProps) {
     const { error } = this.props;
-    if (error !== prevProps.error) {
-      this.setState({ msg: error.msg.msg });
-    } else {
-      this.setState({ msg: null });
-    }
+    // if (error !== prevProps.error) {
+    //   this.setState({ msg: error.msg.msg });
+    // } else {
+    //   this.setState({ msg: null });
+    // }
+    console.log('did update', error);
   }
 
   toggle = () => {
@@ -59,6 +59,7 @@ class RegisterModal extends Component {
     const newUser = { name, email, password };
 
     this.props.register(newUser);
+    console.log('new user', newUser);
   };
 
   render() {
@@ -113,7 +114,6 @@ class RegisterModal extends Component {
       </div>
     );
   }
-
 }
 
 const mapStateToProps = (state) => ({
