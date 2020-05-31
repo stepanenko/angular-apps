@@ -7,7 +7,7 @@ const initialState = {};
 
 const middleWare = [thunk];
 
-// if uncomment redux devtools it fails, also applyMiddleware can be commented out
+// if uncomment redux_devtools it fails, also applyMiddleware can be commented out
 const store = createStore(
   rootReducer,
   initialState,
