@@ -1,7 +1,10 @@
 
 import axios from 'axios';
 import { returnErrors } from './errorActions';
-import { USER_LOADING, USER_LOADED, AUTH_ERROR } from './types';
+import {
+  USER_LOADING, USER_LOADED, AUTH_ERROR,
+  REGISTER_SUCCESS, REGISTER_FAIL
+} from './types';
 
 export const loadUser = () => (dispatch, getState) => {
   dispatch({ type: USER_LOADING });
@@ -15,6 +18,28 @@ export const loadUser = () => (dispatch, getState) => {
       dispatch(returnErrors(err.response.data, err.response.status));
       dispatch({
         type: AUTH_ERROR
+      });
+    });
+};
+
+export const register = ({ name, email, password }) => dispatch => {
+  const config = {
+    headers: { "Content-type": "application/json " }
+  };
+
+  const body = JSON.stringify({ name, email, password });
+
+  axios.post('/api/users', body, config)
+    .then(res => dispatch({
+      type: REGISTER_SUCCESS,
+      payload: res.data
+    }))
+    .catch(err => {
+      dispatch(
+        returnErrors(err.response.data, err.response.status, 'REGISTER_FAIL')
+      );
+      dispatch({
+        type: REGISTER_FAIL
       });
     });
 };

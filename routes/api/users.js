@@ -15,7 +15,7 @@ router.post('/', (req, res) => {
   const { name, email, password } = req.body;
 
   if (!name || !email || !password) {
-    res.status(400).json({ msg: 'Enter all fields' });
+    return res.status(400).json({ msg: 'Enter all fields' });
   }
 
   User.findOne({ email }).then(user => {
