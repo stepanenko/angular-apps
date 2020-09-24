@@ -1,4 +1,4 @@
 {
-  "mongoURI": "mongodb://serg:s333444@ds039211.mlab.com:39211/brad-mern",
+  "mongoURI": "checkout mlab to find a URI",
   "jwtSecret": "brad_mern_jwt"
 }
