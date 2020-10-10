@@ -2,4 +2,4 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Updated on 24.09.2020
+Last updated all on 10.10.2020

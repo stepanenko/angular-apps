@@ -1,7 +1,7 @@
 
 ## [Learn The MERN Stack Series](https://www.youtube.com/watch?v=PBTYxXADG_k)
 
-Author: **Brad Traversy**
+Course teacher: **Brad Traversy**
 
 Progress: **Part 10 Completed**
 
@@ -13,7 +13,7 @@ Progress: **Part 10 Completed**
 - Bootstrap
 - Heroku
 
-Updated on 24.09.2020
+Last updated all on 24.09.2020
 
 > If can't connect to mLab make sure VPN is off
 
