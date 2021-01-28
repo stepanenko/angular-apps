@@ -13,7 +13,7 @@ Progress: **Part 10 Completed**
 - Bootstrap
 - Heroku
 
-Last updated all on 24.09.2020
+Last updated all on 29.01.2021
 
 > If can't connect to mLab make sure VPN is off
 
