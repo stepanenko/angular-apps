@@ -3,7 +3,7 @@
 
 Course teacher: **Brad Traversy**
 
-Progress: **Part 10 Completed**
+Progress: **10 / 12**
 
 **Tech stack:**
 - Nodejs
@@ -13,9 +13,7 @@ Progress: **Part 10 Completed**
 - Bootstrap
 - Heroku
 
-Last updated all on 29.01.2021
-
-> If can't connect to mLab make sure VPN is off
+Last updated all on 27.03.2021
 
 **To deploy on heroku:**
 
@@ -28,4 +26,4 @@ Last updated all on 29.01.2021
 **To clone the repo:**
 - `heroku git:clone -a brad-mern`
 
-App is running at: https://brad-mern.herokuapp.com
+Deprecated (no DB) app is running at: https://brad-mern.herokuapp.com

@@ -25,7 +25,7 @@ router.get('/', async (req, res) => {
  * @desc    Create An Item
  * @access  Private
  */
-router.post('/', auth, async (req, res) => {
+router.post('/', async (req, res) => { // removed auth middleware for testing
   const newItem = new Item({
     name: req.body.name
   });
