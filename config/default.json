@@ -1,4 +1,0 @@
-{
-  "mongoURI": "checkout mlab to find a URI",
-  "jwtSecret": "brad_mern_jwt"
-}
