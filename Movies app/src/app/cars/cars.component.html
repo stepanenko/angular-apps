@@ -1,0 +1,36 @@
+<header>
+  <h1>CARS</h1>
+</header>
+
+<table>
+  <thead>
+    <tr>
+      <th>id</th>
+      <th>Make</th>
+      <th>Model</th>
+      <th>Year</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let car of cars | async">
+      <td>{{ car.id }}</td>
+      <td>{{ car.make }}</td>
+      <td>{{ car.model }}</td>
+      <td>{{ car.year }}</td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- <section class="section">
+      <h1>Cars List:</h1>
+    
+      <div class="container">
+        <div *ngIf="cars">
+          <div *ngFor="let car of cars | async">
+        
+            {{ car.make }}
+        
+          </div>
+        </div>
+      </div>
+    </section> -->

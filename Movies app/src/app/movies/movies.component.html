@@ -1,0 +1,50 @@
+<header>
+  <h1>MOVIES</h1>
+</header> 
+
+<div class="forms-container">
+  <h3>Add Movie:</h3>
+  <form action="/movies/add">
+    <label for="title">Title</label>
+    <input type="text" name="title" [(ngModel)]="title">
+    <label for="year">Year</label>
+    <input type="text" name="year" [(ngModel)]="year">
+    <button (click)="addMovie(title, year)">Add Movie</button>
+  </form>
+  
+  <h3>Edit Movie:</h3>
+  <form action="/movies/edit">
+    <label for="id">id</label>
+    <input type="number" name="id" [(ngModel)]="id" min="1" required>
+    <label for="title">Title</label>
+    <input type="text" name="title" [(ngModel)]="title">
+    <label for="year">Year</label>
+    <input type="text" name="year" [(ngModel)]="year">
+    <button (click)="editMovie(id, title, year)">Edit Movie</button>
+  </form>
+  
+  <h3>Delete Movie:</h3>
+  <form action="/movies/delete">
+    <label for="id">id</label>
+    <input type="number" name="id" [(ngModel)]="id">
+    <button (click)="delete(id)">Delete Movie</button>
+  </form>
+</div>
+
+
+<table>
+  <thead>
+    <tr>
+      <th>id</th>
+      <th class="column-m">Title</th>
+      <th>Year</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let movie of movies">
+      <td>{{ movie.id }}</td>
+      <td>{{ movie.title }}</td>
+      <td>{{ movie.year }}</td>
+    </tr>
+  </tbody>
+</table>

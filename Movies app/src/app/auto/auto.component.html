@@ -1,0 +1,27 @@
+<input class="input is-primary th-s" #id type="number" placeholder="id">
+<input class="input is-primary" #make type="text" placeholder="make">
+<input class="input is-primary" #model type="text" placeholder="model">
+<input class="input is-primary th-s" #year type="number" placeholder="year">
+
+<button class="button is-primary" (click)="addAuto(id, make, model, year)">Add</button>
+<button class="button is-warning" (click)="editAuto(id, make, model, year)">Edit</button>
+
+
+<div class="content">
+  <table class="table is-striped">
+    <tr>
+      <th>id</th>
+      <th>Make</th>
+      <th>Model</th>
+      <th>Year</th>
+      <th>Delete</th>
+    </tr>
+    <tr *ngFor="let auto of autos">
+      <td>{{ auto.id }}</td>
+      <td>{{ auto.make }}</td>
+      <td>{{ auto.model }}</td>
+      <td>{{ auto.year }}</td>
+      <td><button class="button is-danger" (click)="deleteAuto(auto)">Delete</button></td>
+  </table>
+
+</div>

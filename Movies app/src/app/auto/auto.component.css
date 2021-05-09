@@ -1,0 +1,19 @@
+input {
+  margin-top: 20px;
+  margin-left: 20px;
+  width: 300px
+}
+
+button {
+  margin-top: 20px;
+  margin-left: 20px
+}
+
+table {
+  margin: 20px;
+  width: 1000px
+}
+
+.th-s {
+  width: 80px
+}

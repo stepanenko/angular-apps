@@ -1,0 +1,14 @@
+<section class="section">
+  <h1>List of users: </h1>
+
+  <div class="container">
+    <div *ngIf="users">
+      <div *ngFor="let user of users | async">
+    
+        {{ user.login }}
+    
+      </div>
+    </div>
+  </div>
+
+</section>

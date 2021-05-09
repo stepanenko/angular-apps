@@ -1,0 +1,30 @@
+<h5>Type your name:</h5>
+<input [(ngModel)]="name" placeholder="name" />
+<h3>Welcome {{ name }}!</h3>
+<br />
+<hr />
+
+<p>One-way binding:</p>
+<p>Name: {{ firstname }}</p>
+<p>Age: {{ age }}</p>
+<hr />
+
+<p>Binding the property of the html element:</p>
+<input type="text" [value]="firstname" />
+<hr />
+
+<p>Event binding:</p>
+<p>Number of clicks: {{ count }}</p>
+<button (click)="increase($event)">Click me</button>
+<hr />
+
+<p>Two-way binding:</p>
+<p>Hello {{ myname }}</p>
+<input type="text" [(ngModel)]="myname" /> <br /><br />
+<input type="text" [(ngModel)]="myname" />
+<hr />
+
+<child-comp [userName]="name" [userAge]="age"
+  ><h4>Child Component</h4></child-comp
+>
+<input type="text" [(ngModel)]="name" />

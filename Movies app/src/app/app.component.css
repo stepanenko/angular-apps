@@ -1,0 +1,31 @@
+table {
+  border-collapse: collapse;
+  margin: 20px;
+}
+
+input {
+  margin: 10px
+}
+
+label {
+  font-weight: 700
+}
+
+h1 {
+  font-size: 2em;
+  margin-left: 100px;
+  font-weight: 700;
+}
+
+.forms-container {
+  margin: 20px;
+}
+
+th, td {
+  border: 1px solid black;
+  padding: 15px;
+}
+
+.column-m {
+  width: 300px
+}
