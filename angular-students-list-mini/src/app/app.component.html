@@ -1,0 +1,18 @@
+<div class="box">
+
+  <div class="list">
+    <h1>STUDENTS</h1>
+    <ul>
+      <li *ngFor="let student of students"
+        (click)="selectStudent(student)"
+        [class.active]="student === activeStudent">
+        {{ student.name }} {{ student.surname }}
+      </li>
+    </ul>
+  </div>
+
+  <div class="profile">
+    <app-student-profile [student]="activeStudent"></app-student-profile>
+  </div>
+
+</div>

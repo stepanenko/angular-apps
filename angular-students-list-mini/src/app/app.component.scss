@@ -1,0 +1,34 @@
+.box {
+  display: flex;
+}
+
+.list {
+  flex-basis: 200px;
+  background: #67ce5e;
+  padding: 20px;
+
+}
+
+.profile {
+  flex-basis: 500px;
+  background: #ca8638;
+  padding: 20px;
+
+}
+
+ul {
+  padding-left: 0;
+}
+
+li {
+  list-style: none;
+  padding: 10px;
+  cursor: pointer;
+  width: 150px;
+}
+
+.active {
+  background: #5f9757;
+  color: white;
+  font-weight: 600;
+}
