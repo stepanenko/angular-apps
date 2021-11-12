@@ -1,0 +1,11 @@
+<div class="list">
+    <h1>STUDENTS</h1>
+    <ul>
+      <li *ngFor="let student of students"
+        routerLink="/students/{{ student.id }}"
+        (click)="selectStudent(student)"
+        [class.active]="student === activeStudent">
+        {{ student.name }} {{ student.surname }}
+      </li>
+    </ul>
+  </div>

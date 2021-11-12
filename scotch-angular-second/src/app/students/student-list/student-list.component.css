@@ -1,0 +1,24 @@
+
+.list {
+  background: #67ce5e;
+  width: 300px;
+  padding: 20px;
+}
+
+ul {
+  padding-left: 0;
+}
+
+li {
+  list-style: none;
+  padding: 10px;
+  cursor: pointer;
+  width: 150px;
+}
+
+.active {
+  background: #5f9757;
+  color: white;
+  font-weight: 600;
+}
+

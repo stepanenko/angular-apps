@@ -1,0 +1,13 @@
+
+.header {
+  width: 100%;
+}
+
+.main-box {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.main-box div {
+  flex-grow: 1;
+}

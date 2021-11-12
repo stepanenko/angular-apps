@@ -1,0 +1,31 @@
+
+<div class="stud-comp">
+  <div class="stud-list">
+    <app-student-list></app-student-list>
+  </div>
+  <div class="menu-profile">
+    <app-student-menu></app-student-menu>
+    <app-student-profile [student]="activeStudent"></app-student-profile>
+  </div>
+</div>
+
+<!-- <div class="box">
+  <div class="list">
+    <h1>STUDENTS</h1>
+    <ul>
+      <li *ngFor="let student of students"
+        (click)="selectStudent(student)"
+        [class.active]="student === activeStudent">
+        {{ student.name }} {{ student.surname }}
+      </li>
+    </ul>
+  </div> -->
+
+
+      <!-- </div>
+<h2>Cars</h2>
+<ul>
+  <li *ngFor="let car of cars">
+    Make: {{ car.make }}, Model: {{ car.model }}
+  </li>
+</ul> -->

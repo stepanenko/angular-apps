@@ -1,0 +1,36 @@
+
+.stud-comp {
+  background: #9e69cf;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 500px;
+}
+
+.box {
+  display: flex;
+  height: 500px;
+}
+
+.list {
+  background: #67ce5e;
+  padding: 20px;
+}
+
+ul {
+  padding-left: 0;
+}
+
+li {
+  list-style: none;
+  padding: 10px;
+  cursor: pointer;
+  width: 150px;
+}
+
+.active {
+  background: #5f9757;
+  color: white;
+  font-weight: 600;
+}
