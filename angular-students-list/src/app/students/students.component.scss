@@ -1,0 +1,14 @@
+
+.students__wrapper {
+  display: flex;
+  overflow: hidden;
+}
+
+.students__right-field {
+  flex: 1;
+}
+
+.students__list {
+  max-width: 260px;
+  min-width: 260px;
+}

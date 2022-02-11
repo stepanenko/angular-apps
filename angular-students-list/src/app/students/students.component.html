@@ -1,0 +1,22 @@
+<div class="students__wrapper">
+
+  <div class="students__list">
+    <app-students-list
+      (clickOnStudent)="listClicked($event)">
+    </app-students-list>
+  </div>
+
+  <div class="students__right-field">
+
+    <app-tabnav
+      [labels]="tabs"
+      [selected]="selectedLabel$ | async"
+      (tabnavClick)="tabClicked($event.path)">
+    </app-tabnav>
+
+    <div>
+      <router-outlet> </router-outlet>
+    </div>
+
+  </div>
+</div>

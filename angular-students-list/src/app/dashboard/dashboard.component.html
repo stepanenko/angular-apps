@@ -1,0 +1,32 @@
+<div class="dashboard__container">
+  <h3>Subjects</h3>
+  <div class="dashboard-button-row">
+    <mat-button-toggle-group>
+      <mat-button-toggle
+        *ngFor="let subject of subjects$ | async"
+        (click)="selectSubject(subject.id)">
+        {{ subject.name }}
+      </mat-button-toggle>
+    </mat-button-toggle-group>
+  </div> 
+  <div
+  *ngIf="hideChart"
+  class="dashboard_info_message">
+  Please choose a subject</div>
+  <div class="dashboard_subject_chart">
+    <app-common-chart
+      [dataset1]="data$ | async" 
+      [labels]="labels$ | async" 
+      [backgroundColor1]="backgroundColor"
+      [borderColors1]="borderColors"
+      [borderWidth]=1
+      [hidden]="hideChart"
+      chartType="bar"
+      [displayYAxes]="true"
+      chartTitle="Average performance by subject"
+      [legend]= "false"
+      yAxeLabel='mark'
+      [dataset2Hidden]=true>
+    </app-common-chart>
+  </div>
+</div>

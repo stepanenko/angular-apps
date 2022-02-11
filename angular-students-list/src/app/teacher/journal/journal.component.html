@@ -1,0 +1,43 @@
+<table mat-table [dataSource]="data" class="mat-elevation-z8">
+
+  <ng-container matColumnDef="image">
+    <mat-header-cell *matHeaderCellDef >Photo</mat-header-cell>
+    <mat-cell *matCellDef="let student" class="journal_tavle_cell">
+       <img class="student_photo" src="{{ student.img || defaultAvatar }}" alt="ava"> 
+    </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="name">
+    <mat-header-cell *matHeaderCellDef>Name,Surname</mat-header-cell>
+    <mat-cell *matCellDef="let student" class="journal__cell"> {{ student.name }} {{ student.surname }} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="mark">
+    <mat-header-cell *matHeaderCellDef class="journal_mark_header">Mark</mat-header-cell>
+    <mat-cell *matCellDef="let student">  
+      <app-inplace-input
+        class="mark__cell"
+        [initialValue]="student.id.mark"
+        [validator]="validator"
+        [styles]="inputStyles"
+        (inputChange)="handleMarkChange($event, student)">
+      </app-inplace-input>
+    </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="attendance">
+    <mat-header-cell *matHeaderCellDef class="journal_attendance_header">Attendance,%</mat-header-cell>
+    <mat-cell *matCellDef="let student">  
+      <app-inplace-input
+        class="attendance__cell"
+        [initialValue]="student.id.attendance"
+        [validator]="validator"
+        [styles]="inputStyles"
+        (inputChange)="handleAttendanceChange($event, student)">
+      </app-inplace-input>
+    </mat-cell>
+  </ng-container>
+
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+  <mat-row *matRowDef="let student; columns: displayedColumns;"></mat-row>
+</table>

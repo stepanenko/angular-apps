@@ -1,0 +1,37 @@
+<h1 mat-dialog-title class="advertisement_dialog_title" mat-dialog-title>{{ initData.title }}</h1>
+<mat-dialog-content>
+  <form
+    [formGroup]="form"
+    novalidate>
+      <div class="advertisement_dialog_personal_information_wrapper">
+        <div class="full_size_form">
+          <mat-form-field>
+            <textarea
+              class="advertisement_title"
+              matInput
+              placeholder="Title"
+              formControlName="title">
+            </textarea>
+            <mat-error *ngIf="form.controls['title'].hasError('required')">
+              This field is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+  </form>
+</mat-dialog-content>
+<div mat-dialog-actions class="advertisement_dialog_buttons_wrapper">
+  <button
+    mat-button
+    class="advertisement_dialog_button_cancel"
+    (click)="onNoClick()">
+    Cancel
+  </button>
+  <button
+    mat-button
+    class="advertisement_dialog_button_ok"
+    [disabled]="!form.valid || !form.dirty"
+    (click)="onOkClick()">
+    OK
+  </button>
+</div>

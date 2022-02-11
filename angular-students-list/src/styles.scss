@@ -1,0 +1,39 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+  font-family: Verdana, Geneva, sans-serif;
+	font-size: 14px;
+	background: #f2f2f2;
+}
+
+.fullscreen {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.success_notification {
+  background-color: #5cb85c;
+}
+
+.warning_notification {
+  background-color: #f99157;
+}
+
+.error_notification {
+  background-color:#ff0000;;
+}
+
+.search-form .mat-form-field-underline {
+  display: none;
+}
+
+.search-form .mat-form-field-infix {
+  border-top: 0;
+  width: 168px;
+}
+
+.search-form .mat-form-field-wrapper {
+  padding-bottom: 0;
+}

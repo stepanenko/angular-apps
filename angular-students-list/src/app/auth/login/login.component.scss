@@ -1,0 +1,67 @@
+$primary-color: #465DEF;
+$button-color: #f1823B;
+.login_button_sign_up {
+  float: right;
+  color: white;
+  background-color: $primary-color
+}
+
+.login_button_sign_up[disabled] {
+  color: $primary-color;
+  opacity: 0.3;
+}
+
+.login_button_sign_in {
+  float: left;
+  background-color: $button-color;
+  color: white;
+}
+
+.clearfix {
+  &:after {
+    content: "";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    height: 0;
+  }
+}
+
+.form-field {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.login {
+  background: #fff;
+  width: 400px;
+  max-width: 100%;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 1;
+  -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+  margin: 8% auto 0;
+}
+
+.login_inner {
+  padding: 25px;
+
+  h2 {
+    font-size: 1.5em;
+    line-height: 1.5em;
+    margin: 0;
+  }
+
+  .login_title_container {
+    text-align: center;
+    padding-bottom: 15px;
+  }
+}
+
+.login_error {
+  color: #D8000C;
+  background-color: #FFD2D2;
+  text-align: center;
+}

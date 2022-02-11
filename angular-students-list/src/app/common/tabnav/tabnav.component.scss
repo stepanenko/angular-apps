@@ -1,0 +1,17 @@
+$background_color : #fff;
+$font_color: #000;
+$primary-color: #465DEF;
+
+.tabnav_container {
+	width: 100%;
+	background-color: $background_color;
+
+	.mat-tab-link {
+		font-weight: bold;
+		color: $font_color;
+	}
+
+	/deep/.mat-ink-bar{
+		background-color: $primary-color;
+	} 
+}

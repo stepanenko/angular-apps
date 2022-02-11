@@ -1,0 +1,36 @@
+
+<div class="chat-container">
+
+  <div class="chat-window" #chat
+    [scrollTop]="messages.length == 0 ? 0 : chat.scrollHeight">
+
+    <div class="output">
+      <p *ngFor="let msg of messages">
+        <span *ngIf="msg.user">
+          <span id="name">{{ msg.user }}</span> : {{ msg.message }}
+        </span>
+        <span *ngIf="msg.status" id="status">{{ msg.status }}</span>
+      </p>
+    </div>
+
+  </div>
+
+  <input
+    [(ngModel)]="user"
+    maxlength="30"
+    placeholder="Nickname">
+
+  <input
+    maxlength="120"
+    placeholder="Write a message..."
+    (keypress)="typing()"
+    (keyup.enter)="send()" 
+    [(ngModel)]="messageText">
+
+  <button (click)="send()">Send</button>
+
+  <div class="feedback" *ngIf="feedback">
+    <p>{{ feedback }}</p>
+  </div>
+
+</div>

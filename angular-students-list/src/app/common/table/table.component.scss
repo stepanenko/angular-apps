@@ -1,0 +1,49 @@
+$scroll-color: rgba(0, 0, 0, 0.302);
+
+.table__container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  flex-grow: 1;
+}
+
+.mat-table {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.mat-table .mat-row:hover {
+  background: rgba(0, 0, 0, 0.04);
+}
+
+.list::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px $scroll-color;
+  box-shadow: inset 0 0 6px $scroll-color;
+  border-radius: 10px;
+  background-color: #F5F5F5;
+}
+
+.list::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+  background-color: #F5F5F5;
+}
+
+.list::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px $scroll-color;
+  box-shadow: inset 0 0 6px $scroll-color;
+  background-color: #4359e677;
+}
+
+.table__header, 
+.table__cell {
+  display:flex;
+  justify-content:space-around;
+ }
+
+ .table__cell{
+   padding-left: 1%;
+ }

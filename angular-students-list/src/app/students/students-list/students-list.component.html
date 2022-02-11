@@ -1,0 +1,70 @@
+
+<div class="search-container">
+
+  <div class="add-button">
+    <button mat-raised-button
+      (click)="addStudent()">
+      <mat-icon>person_add</mat-icon>
+    </button>
+  </div>
+
+  <div class="search-box">
+    <mat-form-field class="search-form" floatLabel="never">
+
+      <input
+        matInput
+        maxlength="18"
+        autocomplete="off"
+        placeholder="Search"
+        (keyup)="applyFilter($event.target.value)"
+        [(ngModel)]="searchString">
+
+      <button class="clear-button"
+        mat-button
+        matSuffix
+        mat-icon-button
+        aria-label="Clear"
+        *ngIf="searchString"
+        (click)="onSearchClear()">
+        <mat-icon>close</mat-icon>
+      </button>
+
+    </mat-form-field>
+  </div>
+
+</div>
+
+
+<mat-table [dataSource]="studentsList" class="mat-elevation-z8 list">
+
+  <ng-container matColumnDef="image">
+    <mat-header-cell *matHeaderCellDef></mat-header-cell>
+    <mat-cell *matCellDef="let student" class="image">
+        <img src="{{ student.img || defaultAvatar }}" alt="ava">
+    </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="name">
+    <mat-header-cell *matHeaderCellDef>Name</mat-header-cell>
+    <mat-cell *matCellDef="let student" class="name">
+      {{ student.name }} {{ student.surname }}
+    </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="actions">
+    <mat-header-cell *matHeaderCellDef></mat-header-cell>
+    <mat-cell *matCellDef="let student" class="actions">
+      <button mat-icon-button
+        (click)="deleteStudent(student.id)">
+        <mat-icon id="delete">delete_outline</mat-icon>
+      </button>
+    </mat-cell>
+  </ng-container>
+
+  <mat-row 
+    *matRowDef="let student; columns: displayedColumns;"
+    (click)="onTableRowClick(student)"
+    [class.active]="activeStudent?.id === student.id">
+  </mat-row>
+
+</mat-table>

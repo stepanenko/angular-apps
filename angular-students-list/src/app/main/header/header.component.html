@@ -1,0 +1,24 @@
+<mat-toolbar class="header__container">
+  <mat-toolbar-row>
+    <span><i class="material-icons header__icon">local_library</i></span>
+    <span class="header_application_name">Student Lab 1.2</span>
+    <img src="./assets/images/santaHat.png" alt=" Santahat" class="header_santa_hat">
+    <span class="header__spacer"></span>
+    <div class="chat">
+      <mat-icon 
+        matBadge={{onlineUsersCount}}
+        matBadgeColor="accent">person
+      </mat-icon>
+    </div>
+    <img class="header_photo" src="{{photo$ | async}}" alt="photo">
+    <p class="header__label">{{name$ | async}} {{surname$ | async}}</p>
+    <div>
+      <a>
+      <button mat-flat-button class="header_button_logout" (click)="onClickLogout()">
+        <i class="material-icons header__button_icon">exit_to_app</i>
+        Log out
+      </button>
+    </a>
+  </div>
+</mat-toolbar-row>
+</mat-toolbar>

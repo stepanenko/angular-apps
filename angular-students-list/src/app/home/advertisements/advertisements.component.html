@@ -1,0 +1,19 @@
+<div class="advertisment_wrapper">
+  <mat-card>
+    <div class="advertisment_message">
+      <mat-list>
+        <h3 mat-subheader>Advertisements</h3>
+        <mat-list-item *ngFor="let advertisment of adverts$ | async">
+          <mat-icon mat-list-icon>calendar_today</mat-icon>
+          <h4 mat-line>{{advertisment.title}}</h4>
+          <p mat-line> {{advertisment.date | date}} </p>
+          <p mat-line> Published by {{advertisment.publisher.name}} {{advertisment.publisher.surname}}</p>
+        </mat-list-item>
+      </mat-list>
+    </div>
+    <span class="advertisement_spacer"></span>
+    <div class="advertisment_add_button">
+      <app-add-advertisement></app-add-advertisement>
+    </div>
+  </mat-card>
+</div>

@@ -1,0 +1,28 @@
+.teacher__wrapper {
+  display: flex;
+  margin:2%;
+}
+
+.jornal_container {
+  width: 50%;
+  margin-left: 5%;
+}
+
+.teacher_list_header {
+  font-size: 1.3rem;
+  text-align: center;
+  padding: 0 14px;
+  margin-bottom: 10%;
+}
+
+/deep/ .mat-radio-button.mat-accent .mat-radio-inner-circle {
+  background-color: #4286F4;
+}
+
+/deep/ .mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle {
+  border-color: #4286F4;
+}
+
+/deep/ .mat-radio-button.mat-accent .mat-radio-ripple .mat-ripple-element {
+  background-color:#4286f442;
+}

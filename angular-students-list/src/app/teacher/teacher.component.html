@@ -1,0 +1,41 @@
+<div 
+  class="teacher_select_container"
+  *ngIf ="isAdmin$ | async">
+  <mat-form-field>
+    <mat-select 
+      placeholder="Select a teacher" 
+      disableRipple>
+      <mat-option 
+        *ngFor="let teacher  of teachers$ | async "
+        (click)="selectTeacher(teacher.uid)"
+        [value]=teacher.name>
+        {{ teacher.name }} {{ teacher.surname }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
+<div class="teacher__wrapper">
+  <div class="course__container">
+      <mat-list>
+        <div class="teacher_list_header">Courses</div>
+        <mat-list-item 
+          *ngFor="let course of courses$ | async; let i = index">
+          <mat-radio-button 
+            class="teacher_select_option" 
+            [checked]="i === defaultSelected"
+            (click)="changeCourse(course)">
+            {{ course.group.name }}-{{ course.subject.name }}
+          </mat-radio-button>
+        </mat-list-item>
+      </mat-list>
+  </div>
+  <div class="jornal_container">
+    <app-journal
+      [data]="info$ | async"
+      (markChange)="performanceChange($event)"
+      (attendanceChange)="performanceChange($event)">
+    </app-journal>
+  </div>
+</div>
+
+

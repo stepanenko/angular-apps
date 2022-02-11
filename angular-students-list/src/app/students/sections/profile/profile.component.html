@@ -1,0 +1,50 @@
+<mat-card>
+  <div class="profile_container" *ngIf="selectedStudent; else load">
+    <div class="profile_header">
+      <div class="header_photo_wrapper">
+          <img class="student_profile_avatar" src="{{ selectedStudent.img || defaultAvatar }}" alt="avatar">
+      </div>
+      <div class="header_text_wrapper">
+          <p class="profile_header_title header_text" *ngIf="selectedStudent.name || selectedStudent.surname; else warning">{{selectedStudent.name}} {{selectedStudent.surname}}</p>
+          <p class="profile_header_subtitle header_text" *ngIf="selectedStudent.gender">Gender: {{selectedStudent.gender}}</p>
+          <p class="profile_header_subtitle header_text" *ngIf="selectedStudent.group">Group: {{selectedStudent.group.name}}</p>
+      </div>
+      <div class="header_button_wrapper">
+        <button class="student_edit_button" mat-button (click)="onEditClick()"><mat-icon>edit</mat-icon>Edit</button>
+      </div>
+    </div>
+    <h3 class="profile_header_subtitle">Personal information</h3>
+    <div class="student_detail_table_wrapper">
+      <table class="student_detail_table">
+        <tr>
+          <td class="profile_fixed_fields"><mat-icon>cake</mat-icon> Birthday</td>
+          <td *ngIf="selectedStudent.birthdate; else warning">{{selectedStudent.birthdate | date: 'MM/dd/yyyy'}}</td>
+        </tr>
+        <tr>
+          <td class="profile_fixed_fields"> <mat-icon>call</mat-icon> Phone</td>
+          <td *ngIf="selectedStudent.phone; else warning">{{selectedStudent.phone}}</td>
+        </tr>
+        <tr>
+          <td class="profile_fixed_fields"> <mat-icon>email</mat-icon> Email</td>
+          <td *ngIf="selectedStudent.email; else warning">{{selectedStudent.email}}</td>
+        </tr>
+        <tr>
+          <td class="profile_fixed_fields"> <mat-icon>location_city</mat-icon> Address</td>
+          <td *ngIf="selectedStudent.address; else warning">{{selectedStudent.address}}</td>
+        </tr>
+        <tr>
+          <td class="profile_fixed_fields"><mat-icon>info</mat-icon> Description</td>
+          <td *ngIf="selectedStudent.description; else warning">{{selectedStudent.description}}</td>
+        </tr>
+      </table>
+    </div>
+    <ng-template #warning>
+      <div class="warning_message header_text">
+        <span> Unknown information</span>
+      </div>
+    </ng-template>
+  </div>
+  <ng-template #load>
+    Loading
+  </ng-template>
+</mat-card>

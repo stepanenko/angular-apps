@@ -1,0 +1,21 @@
+<div
+  class="inplaceInput__container"
+  (click)="activateInput()">
+  <span>
+    <input
+      matInput
+      *ngIf="inputActive"
+      class="input__active"
+      [value]="value"
+      autofocus
+      (blur)="submit($event.target.value)"
+      (keyup.enter)="submit($event.target.value)"
+      (input)="inputChangedValue($event)"
+      [ngStyle]="styles">
+  </span>
+  <span
+    class="input__unactive"
+    *ngIf="!inputActive">
+      {{ value }}
+  </span>
+</div>

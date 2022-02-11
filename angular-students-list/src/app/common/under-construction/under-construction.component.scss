@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css?family=VT323");
+$text-color-yellow: #EECC10;
+$background-color-white: #FFFFFF;
+
+.underconstuction_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 381px;
+  margin-top: 10%;
+}
+
+.underconstuction_img {
+  padding: 2% 10%;
+  padding-right: 0;
+}
+
+.underconstuction_text_container {
+  margin: auto;
+}
+
+.underconstuction_text {
+  font-family: VT323;
+  font-size: 5rem;
+  color: $text-color-yellow;
+}
+
+@media only screen and (max-width: 880px) {
+  .underconstuction_img {
+    display: none;
+  }
+
+  .underconstuction_text_container {
+    margin: 0 50%;
+  }
+
+  .underconstuction_container{
+    justify-content: flex-end;
+  }
+}

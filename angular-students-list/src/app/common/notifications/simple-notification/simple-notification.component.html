@@ -1,0 +1,11 @@
+<div class="notification_wrapper">
+  <span class="notification_text_color notification_icon">
+    <mat-icon [inline]="true">{{data[1]}}</mat-icon>
+  </span>  
+  <span class="notification_text_color notification_text">
+    {{data[0]}}
+  </span>
+  <button mat-icon-button class="notification_text_color" (click)="dismissNotification()">
+    <mat-icon>close</mat-icon>
+  </button>
+</div>

@@ -1,0 +1,105 @@
+<div class="registation">
+  <div class="registation_title_container">
+    <h2>Sign Up </h2>
+  </div>
+  <div class="clearfix">
+    <div class="registation_block">
+      <mat-card-content>
+        <form 
+          class="my-form" 
+          [formGroup]="registerForm" 
+          novalidate>
+          <mat-form-field class="form-field">
+            <mat-label>First Name</mat-label>
+            <input
+              type="text"
+              matInput
+              placeholder="First Name" 
+              name="firstName" 
+              formControlName="name">
+            <mat-error *ngIf="registerForm.controls['name'].hasError('required')">
+              First Name is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field class="form-field">
+            <mat-label>Last Name</mat-label>
+            <input 
+              type="text"
+              matInput 
+              placeholder="Last Name" 
+              name="lastName" 
+              formControlName="surname">
+            <mat-error *ngIf="registerForm.controls['surname'].hasError('required')">
+              Last Name is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field class="form-field">
+            <input 
+              type="email"
+              matInput 
+              placeholder="Email" 
+              name="email" 
+              formControlName="email">
+            <mat-error *ngIf="registerForm.controls['email'].hasError('required')">
+              Email is <strong>required</strong>
+            </mat-error>
+            <mat-error *ngIf="registerForm.controls['email'].hasError('email')">
+              Please enter a <strong>valid</strong> email address
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field class="form-field">
+            <mat-label>Password</mat-label>
+            <input 
+              type="password" 
+              matInput 
+              name="password" 
+              placeholder="Password" 
+              formControlName="password">
+            <mat-error *ngIf="registerForm.controls['password'].hasError('required')">
+              Password is <strong>required</strong>
+            </mat-error>
+            <mat-error *ngIf="registerForm.controls['password'].hasError('minlength') || registerForm.controls['password'].hasError('pattern')">
+              The password must be 
+              <strong 
+                matTooltip="Password must be longer than 8 characters and consists minimum of 1 symbol, 1 number and 1 uppercase character">
+                strong
+                <sup>
+                  &#9733;
+                </sup>
+              </strong>
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field class="form-field">
+            <mat-label>Confirm password</mat-label>
+            <input 
+              type="password" 
+              name="confirmPassword" 
+              matInput 
+              placeholder="Confirm password" 
+              formControlName="confirmPassword">
+            <mat-error *ngIf="registerForm.controls['confirmPassword'].hasError('required')">
+              Confirm password required
+            </mat-error>
+            <mat-error *ngIf="registerForm.controls['confirmPassword'].hasError('matchPassword')">
+              Password not match
+            </mat-error>
+          </mat-form-field>
+          <a [routerLink]="['/login']">
+            <button 
+              class="registration_button_sign_in" 
+              mat-raised-button>
+              Sign In
+            </button>
+          </a>
+          <button 
+            mat-raised-button 
+            class="registration_button_sign_up" 
+            [disabled]="!registerForm.valid" 
+            (click)="register()">
+            Sign Up
+          </button>
+        </form>
+      </mat-card-content>
+    </div>
+  </div>
+</div>

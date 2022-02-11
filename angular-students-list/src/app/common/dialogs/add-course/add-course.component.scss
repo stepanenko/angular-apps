@@ -1,0 +1,46 @@
+
+$primary-color: #465DEF;
+$text-color-light: #FFFFFF;
+$button-color: #f1823B;
+
+.add-course_dialog_title{
+  color: $primary-color;
+  text-align: center;
+}
+
+.add-course_dialog_buttons_wrapper{
+  display: flex;justify-content: center;
+}
+  
+.full_size_form{
+  padding: 0 10px 0 10px;
+}
+
+.full_size_form > *{
+  width: 100%;
+}
+
+.add-course_dialog_button_cancel{
+  background-color: $button-color;
+  color: $text-color-light;
+}
+
+.add-course_dialog_button_ok{
+  background-color: $primary-color;
+  color: $text-color-light;
+}
+
+.add-course_dialog_button_ok[disabled] {
+  color: white;
+  background-color: $primary-color;
+  opacity: 0.5;
+}
+
+.dialog__wrapper{
+  display: flex;
+  flex-direction: row;
+}
+
+.addcourse__select{
+  margin-left: 10px;
+}

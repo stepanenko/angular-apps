@@ -1,0 +1,44 @@
+$primary-color: #465DEF;
+$text-color-light: #FFFFFF;
+$text-color-dark: #4D4F5C;
+$button-color: #f1823B;
+
+.advertisement_dialog_title{
+  color: $primary-color;
+  text-align: center;
+}
+
+.advertisement_title {
+  height: 100px;
+  box-sizing: border-box;
+  resize: none;
+}
+
+.full_size_form{
+  padding: 0 10px 0 10px;
+}
+
+.full_size_form > *{
+  width: 100%;
+}
+
+.advertisement_dialog_button_cancel{
+  background-color: $button-color;
+  color: $text-color-light;
+}
+
+.advertisement_dialog_button_ok{
+  background-color: $primary-color;
+  color: $text-color-light;
+}
+
+.advertisement_dialog_button_ok[disabled] {
+  color: white;
+  background-color: $primary-color;
+  opacity: 0.5;
+}
+
+.advertisement_dialog_buttons_wrapper{
+  display: flex;
+  justify-content: center;
+}

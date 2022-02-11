@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css?family=Dancing+Script");
+
+mat-header-cell,
+mat-cell {
+  justify-content: space-between;
+}
+
+.journal_mark_header,
+.journal_attendance_header {
+  justify-content: center;
+}
+
+table {
+  width: 100%;
+}
+
+.student_photo {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.mark__cell,
+.attendance__cell,
+.journal__cell {
+  display: flex;
+  align-self: stretch;
+  width: 100%;
+  font-family: Dancing Script;
+  font-size: 1.5rem;
+}

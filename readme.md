@@ -1,4 +1,4 @@
 
-## Angular Applications (-v 11+)
+## Angular Applications (v. 13+)
 
 I keep most of my Angular apps here

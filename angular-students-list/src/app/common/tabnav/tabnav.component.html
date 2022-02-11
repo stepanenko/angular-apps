@@ -1,0 +1,10 @@
+<div class="tabnav_container">
+  <nav mat-tab-nav-bar>
+    <a mat-tab-link
+      *ngFor="let label of labels"
+      (click) ="handleTabNavClick(label)"
+      [active]="selected === label.label">
+      {{ label.label }}
+    </a>
+  </nav>
+</div>

@@ -1,0 +1,27 @@
+<mat-card>
+  <div class="chart__wrapper">
+    <app-common-chart 
+      *ngIf="studentMarks?.length>0 || studentAttendance?.length>0;"
+      title1="Marks"
+      title2="Attendance" 
+      chartType="line"
+      displayYAxes=true
+      chartTitle="Current student performance"
+      minYAxe=0
+      maxYAxe=100
+      fill="false"
+      [dataset1]="studentMarks"
+      [dataset2]="studentAttendance"
+      [labels]="labelsForLineChart"
+      [backgroundColor1]="colorsForLineChart[0]"
+      [backgroundColor2]="colorsForLineChart[1]"
+      [borderColors1]="colorsForLineChart[0]"
+      [borderColors2]="colorsForLineChart[1]">
+    </app-common-chart>
+  </div>
+  <ng-template #warning>
+    <h1 class="chart_warning_message">
+      Unknown information 
+    </h1>
+  </ng-template>
+</mat-card>

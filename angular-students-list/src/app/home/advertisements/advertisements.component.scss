@@ -1,0 +1,20 @@
+.mat-card {
+  height: calc(100vh - 105px);
+  width: 100%;
+  margin: 10px;
+  display: flex;
+}
+
+.advertisment_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.advertisement_spacer{
+  flex: 1 1 auto;
+}
+
+.advertisment_message{
+  width: 300px;
+}

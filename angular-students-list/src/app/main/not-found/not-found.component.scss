@@ -1,0 +1,62 @@
+$main-color: #465DEF;
+* {
+	font-family: 'Times New Roman', Times, serif;
+	margin: 0;
+	padding: 0;
+}
+.error-box {
+	display: flex;
+	height: 100vh;
+	justify-content: center; 
+	align-items: center; 
+}
+.error-404,
+.error-text {
+	display: flex;
+	justify-content: center;
+}
+.error-404 {
+	height: 40vh;
+}
+.f404 {
+	display: inline-block;
+	cursor: pointer;
+	font-family: 'Times New Roman', Times, serif;
+	font-size: 200px;
+	font-size: 28vh;
+	text-align: center;
+	color: $main-color;
+	text-shadow: 0 10vh 40px rgba(0, 0, 0, 0.1);
+	transition: 0.3s;
+}
+.f404:hover,
+.f404:active {
+	margin-top: 3vh;
+	font-size: 175px;
+	font-size: 24.5vh;
+	color: $main-color;
+	text-shadow: 0 0 0 rgba(0, 0, 0, 0);
+}
+
+#f404-1,
+#f404-2,
+#f404-3 {
+	animation: float 2s infinite ease-in-out alternate;
+}
+#f404-2 {
+	animation-delay: 0.4s;
+}
+#f404-3 {
+	animation-delay: 0.8s;
+}
+
+@keyframes float {
+	100% {
+		transform: translateY(20px);
+	}
+}
+.mat-raised-button{
+    background-color: $main-color;
+    margin-top: 10px;
+    color: white;
+}

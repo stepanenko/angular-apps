@@ -1,0 +1,18 @@
+$text-color-dark: #4D4F5C;
+
+mat-card{
+  height: calc(100vh - 120px);
+  margin: 10px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.chart__wrapper{
+  margin: 5%;
+}
+
+.chart_warning_message{
+  font-size: 1.5em;
+  text-align: center;
+  color: $text-color-dark;
+}

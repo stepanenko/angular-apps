@@ -1,0 +1,59 @@
+<div class="login">
+  <mat-progress-bar
+    class="login__progressbar"
+    color="primary"
+    [mode]="isInProgress ? 'indeterminate' : 'determinate'"
+    [value]="100">
+  </mat-progress-bar>
+  <div class="login_inner">
+    <div class="login_title_container container">
+      <h2>Sign In </h2>
+    </div>
+    <div class="clearfix">
+      <div class="login_error" *ngIf="!isValidUser">
+        <p>Incorrect email or password.</p>
+      </div>
+      <div class="login_block">
+        <mat-card-content>
+          <form
+            class="my-form"
+            [formGroup]="loginForm"
+            (ngSubmit)="onSubmit()">
+            <mat-form-field class="form-field">
+              <mat-label>Email</mat-label>
+              <input
+                type="email"
+                matInput
+                placeholder="Email"
+                name="email"
+                formControlName="email" >
+              <mat-error *ngIf="loginForm.controls['email'].hasError('required')">
+                Email is <strong>required</strong>
+              </mat-error>
+              <mat-error *ngIf="loginForm.controls['email'].hasError('email')">
+                Please enter a <strong>valid</strong> email address
+              </mat-error>
+            </mat-form-field>
+            <mat-form-field class="form-field">
+              <mat-label>Password</mat-label>
+              <input
+                type="password"
+                matInput
+                name="password"
+                placeholder="Password"
+                formControlName="password" >
+              <mat-error *ngIf="loginForm.controls['password'].hasError('required')">
+                Password is <strong>required</strong>
+              </mat-error>
+            </mat-form-field>
+            <button
+            class="login_button_sign_up"
+            mat-raised-button>
+            Sign In
+            </button>
+          </form>
+        </mat-card-content>
+      </div>
+    </div>
+  </div>
+</div>

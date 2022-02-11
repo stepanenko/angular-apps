@@ -1,0 +1,9 @@
+<div class="main__container fullscreen">
+  <app-header [onlineUsersCount]="onlineUsers"></app-header>
+
+  <app-sidebar
+    class="main__sidebar"
+    [unreadMsgCount]="unreadMessages"
+    [places]="places$ | async">
+  </app-sidebar>
+</div>
