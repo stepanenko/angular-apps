@@ -1,0 +1,17 @@
+<h1>List of Servers:</h1>
+<p *ngIf="!allowNewServer">No more new servers!</p>
+<p *ngIf="allowNewServer">New servers are allowed</p>
+<br>
+<label>Name of New Server: {{ serverName }}</label>
+<input type="text" class="form-control" name="name" [(ngModel)]="serverName">
+<button class="btn btn-primary" [disabled]="!allowNewServer" (click)="onCreateServer(); status = true">
+  Add Server
+</button>
+
+<span> Status: {{ serverCreationStatus }} </span>
+<span *ngIf="status">It's name is: {{ servers[servers.length - 1] }}</span>
+<p *ngFor="let server of servers">
+  {{ server }}
+</p>
+
+<app-server *ngFor="let server of servers"></app-server>
