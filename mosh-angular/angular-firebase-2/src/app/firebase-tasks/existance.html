@@ -1,0 +1,17 @@
+<h2>Cuisines:</h2>
+<ul>
+  <li *ngFor="let c of cuisines | async">
+    {{ c.key }} - {{ c.payload | json }}
+  </li>
+</ul>
+<hr>
+<h2>Restaurants:</h2>
+<ul>
+  <li *ngFor="let r of restaurants | async">
+    {{ r.name }}
+  </li>
+</ul>
+<hr>
+<div *ngIf="exists | async">
+  EXISTS
+</div>

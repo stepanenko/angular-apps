@@ -1,0 +1,21 @@
+
+<ul>
+  <li *ngFor="let item of cuisines | async">
+    <!-- "async" pipe will internally create a subscription and it will remove it once the component is destroyed -->
+    {{ item | json }} 
+  </li>
+</ul>
+<hr>
+<ul>
+  <li *ngFor="let item of cui | async">
+    {{ item.key }} 
+    {{ item.payload | json }} 
+  </li>
+</ul>
+<hr>
+{{ (restaurant | async)?.name }}
+<hr>
+<button (click)="add()">Add</button>
+<button (click)="update()">Update</button>
+<button (click)="updateOrAdd()">Update Or Add</button>
+<button (click)="remove()">Remove</button>

@@ -15,7 +15,7 @@ export class ChatComponent implements OnInit, OnDestroy {
   messageText: string;
   messages: Message[] = [];
 
-  constructor(private chatService: ChatService) {}
+  constructor(private chatService: ChatService) { }
 
 
   ngOnInit() {
@@ -38,8 +38,8 @@ export class ChatComponent implements OnInit, OnDestroy {
     this.chatService.onAction(event)
       .subscribe(data => {
         event === 'history'
-        ? this.messages = [...data]
-        : this.messages = this.messages.concat(data);
+          ? this.messages = [...data]
+          : this.messages = this.messages.concat(data);
 
         this.feedback = null;
       });

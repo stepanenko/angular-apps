@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "mosh-complete"
+  },
+  "targets": {
+    "mosh-complete": {
+      "hosting": {
+        "angular-complete-project": [
+          "mosh-complete"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+<h2>Cuisines:</h2>
+<ul>
+  <li *ngFor="let c of cuisines | async">
+    {{ c.key }} - {{ c.payload | json }}
+  </li>
+</ul>
+<hr>
+<h2>Restaurants:</h2>
+<ul>
+  <li *ngFor="let r of restaurants | async">
+    <!-- "async" pipe will internally create a subscription and it will remove it once the component is destroyed -->
+    {{ r.name }} 
+  </li>
+</ul>

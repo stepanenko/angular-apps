@@ -1,0 +1,30 @@
+<label for="add">Add:</label>
+<input type="text" name="add" #course (keyup.enter)="add(course)">
+
+<h2>Author</h2>
+<ul>
+  <li>{{ author.name }}</li>
+  <li>{{ author.students }}</li>
+  <li>{{ author.isPremium }}</li>
+</ul>
+
+<h2>Courses List (valueChanges):</h2>
+<p>{{ courses | async | json }}</p>
+<ul>
+  <li *ngFor="let course of courses | async">
+    {{ course }}
+  </li>
+</ul>
+
+<h2>Courses List (snapshotChanges):</h2>
+<p>{{ coursesList | async | json }}</p>
+<ul>
+  <li *ngFor="let co of coursesList | async">
+    {{ co.payload | json }}
+    <button (click)="update(co)">Update</button>
+    <button (click)="delete(co)">Delete</button>
+  </li>
+</ul>
+
+<h2>Course Object:</h2>
+<h3>{{ item | async }}</h3>

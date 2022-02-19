@@ -1,0 +1,11 @@
+
+<span 
+  (click)="onStarClick()"
+  class="glyphicon"
+  [ngClass]="{
+    'glyphicon-star': isFavorite,
+    'glyphicon-star-empty': !isFavorite
+  }"
+  style="font-size: 3em">
+</span>
+
