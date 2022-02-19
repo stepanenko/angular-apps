@@ -1,5 +1,5 @@
 
-# Angular Apps thought by Mosh
+# Angular Apps from Mosh's lectures
 
 Updated all packages on: 19.02.2022
 
