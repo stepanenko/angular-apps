@@ -1,0 +1,53 @@
+[  {
+  "id": 1,
+  "name": "Maria",
+  "surname": "Ivanova",
+  "group": "SE41",
+  "birthdate": "04.07.1998",
+  "phone": "+380630001122",
+  "address": "Lviv, Pasternaka, 5",
+  "grade": "bachelor",
+  "description":"Lorem ipsum maria dolor",
+  "email": "mariaivanova@test.com",
+  "password": "maria98"
+  },
+  {
+  "id": 2,
+  "name": "Jessica",
+  "surname": "Cruise",
+  "group": "SE42",
+  "birthdate": "20.08.1998",
+  "phone": "0630001234",
+  "address": "Lviv, Pasternaka, 10",
+  "grade": "bachelor",
+  "description":"some text description",
+  "email": "paraskathebest@test.com",
+  "password": "paraska98"
+  },
+  {
+  "id": 3,
+  "name": "Ivan",
+  "surname": "Petrov",
+  "group": "SE11",
+  "birthdate": "04.07.1998",
+  "phone": "+380630001122",
+  "address": "Lviv, Zamarstynivska, 15",
+  "grade": "master",
+  "description":"Lorem ipsum lalala",
+  "email": "ivanpetrov@test.com",
+  "password": "ivan98"
+  },
+  {
+  "id": 4,
+  "name": "Maksym",
+  "surname": "Kruts",
+  "group": "SE12",
+  "birthdate": "04.07.1998",
+  "phone": "+380630111122",
+  "address": "Lviv, Naukova, 22",
+  "grade": "master",
+  "description":"Ipsum",
+  "email": "maxkrut@test.com",
+  "password": "maksym98"
+  }
+]

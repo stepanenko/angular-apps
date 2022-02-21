@@ -1,0 +1,22 @@
+
+<div class="stud-list">
+  <h2>Students List</h2>
+  <div class="student" *ngFor="let student of students | async" (click)="selectStudent(student)">
+    {{ student.name }} {{ student.surname }}
+  </div>
+
+  <h3>Top student</h3>
+  <div>
+    <h4>
+      {{ topStudent?.name }} {{ topStudent?.surname }}
+      <!-- used '?' to avoid TypeError [core.js:6228] -->
+    </h4>
+  </div>
+
+  <h3>Selected student</h3>
+  <div class="selected-student">
+    <h4>
+      {{ selectedStudent?.name }} {{ selectedStudent?.surname }}
+    </h4>
+  </div>
+</div>

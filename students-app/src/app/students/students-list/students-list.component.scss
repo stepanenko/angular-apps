@@ -1,0 +1,17 @@
+
+.stud-list {
+  background: green;
+  width: 200px;
+  height: 500px;
+  padding: 10px;
+  .student {
+    cursor: pointer;
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+}
+
+.selected-student {
+  color: white;
+}

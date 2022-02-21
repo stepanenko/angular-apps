@@ -1,0 +1,58 @@
+$primary-color: rgb(233, 70, 78);
+
+.registration_button_sign_up {
+  float: right;
+  color: white;
+  background-color: $primary-color
+}
+
+.registration_button_sign_up[disabled] {
+  color: $primary-color;
+}
+
+.registration_button_sign_in {
+  float: left;
+  background-color: $primary-color;
+  color: white;
+}
+
+.clearfix {
+  &:after {
+    content: "";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    height: 0;
+  }
+}
+
+.registation_block_full_width {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.registation {
+  background: #fff;
+  width: 400px;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 25px;
+  margin: 8% auto 0;
+  position: relative;
+  z-index: 1;
+  border-top: 5px solid $primary-color;
+  -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+
+  h2 {
+    font-size: 1.5em;
+    line-height: 1.5em;
+    margin: 0;
+  }
+
+  .registation_title_container {
+    text-align: center;
+    padding-bottom: 15px;
+  }
+}
