@@ -2,7 +2,7 @@
 
 Course Author: **Max Schwarzmüller**. [YouTube Channel](https://www.youtube.com/channel/UCSJbGtTlrDami-tDGPUV9-w)
 
-Updated all packages on: **27.09.2020**
+Updated all packages on: **23.10.2022**
 
 Downloaded as:
 - D:\VIDEO\ANGULAR new Video\[ Max ] Udemy - the-complete-guide-to-angular-2 [FreeTutorials.Eu]
